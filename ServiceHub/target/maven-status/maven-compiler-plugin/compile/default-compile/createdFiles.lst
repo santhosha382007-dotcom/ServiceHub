@@ -1,0 +1,15 @@
+com\servicehub\model\User.class
+com\servicehub\model\LoginForm.class
+com\servicehub\model\RegistrationForm.class
+com\servicehub\config\PasswordConfig.class
+com\servicehub\controller\UserController.class
+com\servicehub\config\DefaultAdminInitializer.class
+com\servicehub\ServiceHubApplication.class
+com\servicehub\model\BookingStatus.class
+com\servicehub\service\BookingService.class
+com\servicehub\repository\UserRepository.class
+com\servicehub\service\UserService.class
+com\servicehub\model\Role.class
+com\servicehub\controller\PageController.class
+com\servicehub\repository\BookingRepository.class
+com\servicehub\model\Booking.class

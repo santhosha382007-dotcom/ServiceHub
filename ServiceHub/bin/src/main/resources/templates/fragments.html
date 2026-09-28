@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<header th:fragment="site-header" class="site-header">
+    <div class="container nav-wrap">
+        <a class="brand" th:href="@{/}" aria-label="ServiceHub home">
+            <span class="brand-mark">S</span>
+            <span>Service<span class="brand-accent">Hub</span></span>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" data-nav-links aria-label="Main navigation">
+            <a th:classappend="${activePage == 'home'} ? 'active'" th:href="@{/}">Home</a>
+            <a th:classappend="${activePage == 'services'} ? 'active'" th:href="@{/services}">Services</a>
+            <a th:classappend="${activePage == 'bookings'} ? 'active'" th:href="@{/my-bookings}">My bookings</a>
+            <a class="nav-admin" th:classappend="${activePage == 'admin'} ? 'active'" th:href="@{/admin}">Admin demo</a>
+            <a class="button button-small button-outline" th:href="@{/login}">Sign in</a>
+        </nav>
+    </div>
+</header>
+
+<footer th:fragment="site-footer" class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <a class="brand footer-brand" th:href="@{/}"><span class="brand-mark">S</span><span>Service<span class="brand-accent">Hub</span></span></a>
+            <p class="footer-copy">Good services, right when you need them.</p>
+        </div>
+        <div>
+            <p class="footer-title">Explore</p>
+            <a th:href="@{/services}">Browse services</a>
+            <a th:href="@{/my-bookings}">My bookings</a>
+        </div>
+        <div>
+            <p class="footer-title">Need help?</p>
+            <a href="mailto:hello@servicehub.test">hello@servicehub.test</a>
+            <span>Mon - Fri, 9am - 6pm</span>
+        </div>
+    </div>
+    <div class="container footer-bottom"><span>© 2025 ServiceHub</span><span>Built for your everyday.</span></div>
+</footer>
+</body>
+</html>
